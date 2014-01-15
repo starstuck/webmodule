@@ -1,7 +1,16 @@
 var b = require('./b');
 
 exports.describe = function() {
-    return 'Module A with dependency:' + b;
+    var test ='sda';
+    return 'Module A with dependency: ' + b.describe();
 };
 
-i.do.not.exists += 1;
+function failure() {
+    i.do.not.exists += 1;
+};
+
+exports.fail = function() {
+    failure();
+};
+
+//exports.fail();
